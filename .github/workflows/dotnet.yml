@@ -19,4 +19,4 @@ jobs:
     
     - name: Setup .NET
       working-directory: CashflowGame.Web
-      run: docker build . --file Dockerfile --tag cashflow-game:$(date +%s)
+      run: docker build . --file Dockerfile --tag cashflow-game:$(date +'%s')
