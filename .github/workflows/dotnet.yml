@@ -16,7 +16,16 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: Stop and remove container
+      run: docker rm --force cashflow-game-app
     
-    - name: Setup .NET
+    - name: Run Dockerfile
       working-directory: CashflowGame.Web
       run: docker build . --file Dockerfile --tag cashflow-game
+
+    - name: Clean unused images
+      run: docker image prune --force
+
+    - name: Start container
+      run: docker run -d --name cashflow-game-app cashflow-game
