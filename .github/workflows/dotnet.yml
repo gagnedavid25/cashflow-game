@@ -28,4 +28,4 @@ jobs:
       run: docker image prune --force
 
     - name: Start container
-      run: docker run -d --name cashflow-game-app cashflow-game
+      run: docker run -d -p 7291:8080 --name cashflow-game-app cashflow-game
