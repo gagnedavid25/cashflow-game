@@ -2,15 +2,41 @@
 
 <PageTitle>Counter</PageTitle>
 
-<MudContainer Class="mt-12 mx-4" MaxWidth="MaxWidth.Medium">
-    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Counter</MudText>
-    
-    <MudGrid Spacing="6" Class="mt-12">
-        <MudItem xs="8" Class="grey lighten-3 rounded-xl">
-            <MudText>Current count: @currentCount</MudText>
+<MudContainer Class="mt-12" MaxWidth="MaxWidth.Medium">
+    <MudGrid Spacing="4" Class="mt-12 px-4">
+        <MudItem xs="6">
+            <MudTextField T="string" Label="Profession" />
         </MudItem>
-        <MudItem xs="4">
-            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="IncrementCount">Click me</MudButton>
+        <MudItem xs="6">
+            <MudTextField T="string" Label="Joueur" />
+        </MudItem>
+
+        <MudItem xs="6">
+            @* Income *@
+            <MudText Typo="Typo.h5" GutterBottom="true">Revenus</MudText>
+
+            <MudPaper Outlined="true">
+                <MudList Clickable="true">
+                    <MudListItem Icon="@Icons.Material.Filled.Work" Class="pa-2">
+                        <div class="d-flex">
+                            <MudText>Salaire</MudText>
+                            <MudText Inline="true" Class="ml-auto">700$</MudText>
+                        </div>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.TrendingUp" Class="pa-2">
+                        <div class="d-flex">
+                            <MudText>Intérêts/Dividendes</MudText>
+                            <MudText Class="ml-auto">0$</MudText>
+                        </div>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.House" Class="pa-2">
+                        <div class="d-flex">
+                            <MudText>Immobilier</MudText>
+                            <MudText Class="ml-auto">0$</MudText>
+                        </div>
+                    </MudListItem>
+                </MudList>
+            </MudPaper>
         </MudItem>
     </MudGrid>
 </MudContainer>
