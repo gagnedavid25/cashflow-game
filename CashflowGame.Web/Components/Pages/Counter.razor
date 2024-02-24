@@ -11,7 +11,7 @@
             <MudTextField T="string" Label="Joueur" />
         </MudItem>
 
-        <MudItem xs="6">
+        <MudItem xs="12" md="6">
             @* Income *@
             <MudText Typo="Typo.h5" GutterBottom="true">Revenus</MudText>
 
@@ -29,9 +29,37 @@
                             <MudText Class="ml-auto">0$</MudText>
                         </div>
                     </MudListItem>
-                    <MudListItem Icon="@Icons.Material.Filled.House" Class="pa-2">
+                    <MudListItem Icon="@Icons.Material.Filled.Business" Class="pa-2">
                         <div class="d-flex">
                             <MudText>Immobilier</MudText>
+                            <MudText Class="ml-auto">0$</MudText>
+                        </div>
+                    </MudListItem>
+                </MudList>
+            </MudPaper>
+        </MudItem>
+
+        <MudItem xs="12" md="6">
+            @* Income *@
+            <MudText Typo="Typo.h5" GutterBottom="true">Dépenses</MudText>
+
+            <MudPaper Outlined="true">
+                <MudList Clickable="true">
+                    <MudListItem Icon="@Icons.Material.Filled.RequestPage" Class="pa-2">
+                        <div class="d-flex">
+                            <MudText>Taxes</MudText>
+                            <MudText Inline="true" Class="ml-auto">700$</MudText>
+                        </div>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.House" Class="pa-2">
+                        <div class="d-flex">
+                            <MudText>Hypothèque</MudText>
+                            <MudText Class="ml-auto">0$</MudText>
+                        </div>
+                    </MudListItem>
+                    <MudListItem Icon="@Icons.Material.Filled.School" Class="pa-2">
+                        <div class="d-flex">
+                            <MudText>Prêt étudiant</MudText>
                             <MudText Class="ml-auto">0$</MudText>
                         </div>
                     </MudListItem>
