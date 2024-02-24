@@ -1,13 +1,19 @@
 ﻿@page "/counter"
-@rendermode InteractiveServer
 
 <PageTitle>Counter</PageTitle>
 
-<h1>Counter</h1>
-
-<p role="status">Current count: @currentCount</p>
-
-<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+<MudContainer Class="mt-12 mx-4" MaxWidth="MaxWidth.Medium">
+    <MudText Typo="Typo.h3" Align="Align.Center" GutterBottom="true">Counter</MudText>
+    
+    <MudGrid Spacing="6" Class="mt-12">
+        <MudItem xs="8" Class="grey lighten-3 rounded-xl">
+            <MudText>Current count: @currentCount</MudText>
+        </MudItem>
+        <MudItem xs="4">
+            <MudButton Variant="Variant.Filled" Color="Color.Primary" OnClick="IncrementCount">Click me</MudButton>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
 
 @code {
     private int currentCount = 0;
